@@ -23,17 +23,17 @@ public class TareaController {
         return tareaService.saveTarea(tarea);
     }
 
-    @GetMapping("/{id}/")
+    @GetMapping("/{id}")
     public Tarea buscarTarea(@PathVariable int id){
         return tareaService.getTareaId(id);
     }
 
-    @PutMapping("/{id}/")
+    @PutMapping("/{id}")
     public Tarea actualizarTarea(@PathVariable int id, @RequestBody Tarea tarea){
         return tareaService.updaTarea(tarea);
     }
     
-    @DeleteMapping("/{id}/")
+    @DeleteMapping("/{id}")
     public String eliminarTarea(@PathVariable int id){
         return tareaService.dalateTarea(id);
     }
